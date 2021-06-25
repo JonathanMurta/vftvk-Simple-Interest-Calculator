@@ -1,4 +1,119 @@
-body {background-color:tan;}
-h1{color:green;}
+body
+{
+    background-color: tan;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
 
+p
+{
+	margin: 0;
+}
 
+section
+{
+    width: 100%;
+    height: 100%;
+}
+
+.a-calculator
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #000;
+}
+
+.calculator
+{
+	width: 100%;
+    margin: 60px;
+    padding: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 40px;
+    position: relative;
+}
+
+.title-calculator
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.title-calculator h1
+{
+	color: #808080;
+    font-size: 40px;
+    font-family: system-ui;
+}
+
+.a-input-calculator
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.item-input-calculator
+{
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.item-input-calculator label
+{
+    width: 120px;
+    font-family: system-ui;
+    font-weight: 600;
+}
+
+.item-input-calculator span
+{
+    font-family: system-ui;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.item-input-calculator input,
+.result-calculator p
+{
+	font-family: system-ui;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.result-calculator p
+{
+	font-size: 15px;
+}
+
+.item-input-calculator select
+{
+	width: 40px;
+}
+
+.result-calculator
+{
+    margin-top: 10px;
+    display: none;
+}
+
+footer.calculator-footer
+{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.calculator-footer p
+{
+	font-family: system-ui;
+	font-size: 20px;
+}
