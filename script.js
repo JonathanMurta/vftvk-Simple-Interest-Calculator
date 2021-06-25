@@ -6,10 +6,23 @@ function compute()
           valueOption  = select.options[select.selectedIndex].text,
           DateFullYear = new Date().getFullYear() + parseInt(valueOption)
 
-    document.querySelector("p.amount-calculator").innerHTML     = `If you deposit <mark>${valueAmount}</mark>`
-    document.querySelector("p.percentage-calculator").innerHTML = `at an interest rate of <mark>${range}%</mark>`
-    document.querySelector("p.final-calculator").innerHTML      = `You will receive an amount of <mark>${((valueAmount * range) / 100) * valueOption}</mark>`
-    document.querySelector("p.year-calculator").innerHTML       = `in the year <mark>${DateFullYear}</mark>`
+    if(valueAmount > 0)
+    {
+        document.querySelector("p.amount-calculator").innerHTML     = `If you deposit <mark>${valueAmount}</mark>`
+        document.querySelector("p.percentage-calculator").innerHTML = `at an interest rate of <mark>${range}%</mark>`
+        document.querySelector("p.final-calculator").innerHTML      = `You will receive an amount of <mark>${((valueAmount * range) / 100) * valueOption}</mark>`
+        document.querySelector("p.year-calculator").innerHTML       = `in the year <mark>${DateFullYear}</mark>`
+    }
+    else
+    {
+        document.querySelectorAll(".result-calculator p").forEach(element =>
+        {
+            element.innerHTML = ""
+        })
+        document.querySelector("p.amount-calculator").innerHTML = "enter a positive number!"
+    }
+
+
     document.querySelector(".result-calculator").style.display  = "block"
 }
 
