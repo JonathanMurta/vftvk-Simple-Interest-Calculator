@@ -32,7 +32,9 @@ const range = document.querySelector("input#rate")
 
 range.addEventListener("change", () =>
 {
-    document.querySelector(".item-input-calculator span").innerHTML = `${range.value}%`
-    console.log(range.value)
+    if(range.value > 0)
+        document.querySelector(".item-input-calculator span").innerHTML = `${range.value}%`
+    else
+        document.querySelector(".item-input-calculator span").innerHTML = `1%`
 })
 
