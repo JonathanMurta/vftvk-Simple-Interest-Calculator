@@ -20,7 +20,8 @@ function compute()
             element.innerHTML = ""
         })
 
-        document.querySelector("p.amount-calculator").innerHTML = "enter a positive number!"
+        alert("enter a positive number!")
+
         document.querySelector(".item-input-calculator input#principal").focus()
     }
 
