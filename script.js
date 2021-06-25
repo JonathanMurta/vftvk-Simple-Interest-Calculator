@@ -13,7 +13,7 @@ function compute()
         document.querySelector("p.final-calculator").innerHTML      = `You will receive an amount of <mark>${((valueAmount * range) / 100) * valueOption}</mark>`
         document.querySelector("p.year-calculator").innerHTML       = `in the year <mark>${DateFullYear}</mark>`
     }
-    else
+    else if(!valueAmount || valueAmount <= 0)
     {
         document.querySelectorAll(".result-calculator p").forEach(element =>
         {
